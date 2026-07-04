@@ -20,7 +20,19 @@ import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import MarkdownIt from 'markdown-it';
 import { chromium } from 'playwright-core';
-import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import {
+  PDFDocument,
+  StandardFonts,
+  rgb,
+  PDFName,
+  PDFArray,
+  PDFContentStream,
+  pushGraphicsState,
+  popGraphicsState,
+  setFillingRgbColor,
+  rectangle,
+  fill,
+} from 'pdf-lib';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const repo = path.resolve(here, '..', '..');
@@ -246,12 +258,36 @@ function glyphReport(source, pdfPath) {
   return bad;
 }
 
-/* ---------------- footer stamping ----------------
+/* ---------------- background + footer stamping ----------------
    Chromium's displayHeaderFooter paints an opaque white strip over the
    bottom margin, which ruins the full-bleed dark pages; instead the footer
-   (doc title left, "N / M" right) is drawn into the finished PDF here. */
+   (doc title left, "N / M" right) is drawn into the finished PDF here.
 
-async function stampFooters(pdfPath, title, { skipFirstPage }) {
+   The page background also gets an explicit full-MediaBox dark rectangle
+   painted UNDER each page's content: Chromium's propagated canvas
+   background covers the whole sheet in some renderers (poppler) but leaves
+   the margin strips white in others (pdfium, macOS Preview). A plain
+   opaque rect at the bottom of the z-order renders identically everywhere. */
+
+const PAGE_BG = rgb(0x0a / 255, 0x29 / 255, 0x30 / 255);
+
+function paintBackgroundUnderContent(doc, page) {
+  const mb = page.getMediaBox();
+  const ops = [
+    pushGraphicsState(),
+    setFillingRgbColor(PAGE_BG.red, PAGE_BG.green, PAGE_BG.blue),
+    rectangle(mb.x, mb.y, mb.width, mb.height),
+    fill(),
+    popGraphicsState(),
+  ];
+  const stream = PDFContentStream.of(doc.context.obj({}), ops);
+  const bgRef = doc.context.register(stream);
+  const existing = page.node.get(PDFName.of('Contents'));
+  const refs = existing instanceof PDFArray ? existing.asArray() : existing ? [existing] : [];
+  page.node.set(PDFName.of('Contents'), doc.context.obj([bgRef, ...refs]));
+}
+
+async function stampPdf(pdfPath, title, { skipFirstPage }) {
   const doc = await PDFDocument.load(fs.readFileSync(pdfPath));
   const font = await doc.embedFont(StandardFonts.Helvetica);
   const pages = doc.getPages();
@@ -262,6 +298,7 @@ async function stampFooters(pdfPath, title, { skipFirstPage }) {
   const mutedTeal = rgb(0x7e / 255, 0x98 / 255, 0x9e / 255);
   const amber = rgb(0xd8 / 255, 0x9b / 255, 0x62 / 255);
   pages.forEach((pg, i) => {
+    paintBackgroundUnderContent(doc, pg);
     if (skipFirstPage && i === 0) return; // no footer on a full cover page
     const label = `${i + 1} / ${total}`;
     pg.drawText(title, { x: inset, y, size, font, color: mutedTeal });
@@ -302,7 +339,7 @@ try {
       displayHeaderFooter: false,
       margin: { top: '0', bottom: '0', left: '0', right: '0' },
     });
-    await stampFooters(outPath, title, { skipFirstPage: cfg.cover === 'full' });
+    await stampPdf(outPath, title, { skipFirstPage: cfg.cover === 'full' });
 
     // -------- fidelity gate #2: every source block appears in the PDF --------
     const missing = verifyPdf(outPath, blocks, title);
