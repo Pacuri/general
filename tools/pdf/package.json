@@ -1,0 +1,18 @@
+{
+  "name": "nikolytics-doc-pdfs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Renders docs/*.md to brand-styled PDFs in docs/pdf/",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@fontsource/nunito": "^5.2.7",
+    "@fontsource/nunito-sans": "^5.2.7",
+    "markdown-it": "^14.3.0",
+    "pdf-lib": "^1.17.1",
+    "playwright-core": "^1.61.1"
+  }
+}
