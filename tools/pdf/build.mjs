@@ -269,7 +269,7 @@ function glyphReport(source, pdfPath) {
    the margin strips white in others (pdfium, macOS Preview). A plain
    opaque rect at the bottom of the z-order renders identically everywhere. */
 
-const PAGE_BG = rgb(0x0a / 255, 0x29 / 255, 0x30 / 255);
+const PAGE_BG = rgb(0x03 / 255, 0x1a / 255, 0x22 / 255); // --background token
 
 function paintBackgroundUnderContent(doc, page) {
   const mb = page.getMediaBox();
@@ -295,8 +295,8 @@ async function stampPdf(pdfPath, title, { skipFirstPage }) {
   const size = 7.5;
   const y = 0.34 * 72;
   const inset = 0.85 * 72;
-  const mutedTeal = rgb(0x7e / 255, 0x98 / 255, 0x9e / 255);
-  const amber = rgb(0xd8 / 255, 0x9b / 255, 0x62 / 255);
+  const mutedTeal = rgb(0x9d / 255, 0xaa / 255, 0xaa / 255); // --muted-foreground token
+  const amber = rgb(0xe8 / 255, 0xa5 / 255, 0x4b / 255); // --chart-gold-light token
   pages.forEach((pg, i) => {
     paintBackgroundUnderContent(doc, pg);
     if (skipFirstPage && i === 0) return; // no footer on a full cover page

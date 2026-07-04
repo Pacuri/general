@@ -1,8 +1,10 @@
 # Markdown to PDF (Nikolytics document theme)
 
 Renders the markdown documents in `docs/` to styled PDFs in `docs/pdf/`,
-using the brand palette (deep teal `#0A2930`, amber `#DE9A58`, white italic
-accents) and Nunito / Nunito Sans type.
+using the website's design tokens (background `#031A22`, primary gold
+`#C4854A`, chart gold light `#E8A54B`, card/border/input surfaces, muted
+foreground `#9DAAAA` body text with `#FAFAFA` emphasis; the full token map
+sits at the top of `theme.css`) and Nunito / Nunito Sans type.
 
 ## Rebuild
 
