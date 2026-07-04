@@ -48,6 +48,8 @@ Style rules in force for all documents: plain and direct, no book-style theatric
 
 17. **Founder time budget: 3 hours per day total for outreach plus content**, Nikola's stated priority for the coming days. All quotas size to this number, not to the old plan's 5+ hours.
 
+18. **Evergreen Codebase Plan confirmed unchanged after challenge.** Nikola questioned whether the included 12 months should become 6 included + 6 paid, to start recurring revenue earlier. Decision: keep 12 months included, 24 on Full-Send. Reasons: the bonus kills the legacy-system objection and powers the $85k prepay incentive (day-0 cash is the binding constraint); shrinking it would weaken the $250k close for small maintenance fees and contradict the no-lock-in positioning; the applicable book rule is "extend, don't eat, the term." Recurring revenue routes to the existing layer: the Product Engine (primary), the Extended Shield, and the year-two Evergreen renewal (month-10 conversation, prepay incentivized, 4-week billing). The Engine's hire gate may be revisited once the first build lands.
+
 ## Session order from here
 
 1. **Content identity and positioning session** (Nikola's four agenda items; feeds the LinkedIn profile rebuild).
