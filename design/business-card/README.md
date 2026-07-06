@@ -4,16 +4,17 @@ Vectorized from the original hand sketch: the email address doubles as an
 annotated diagram — `nikola` is labeled **me**, `nikolytics.com` is labeled
 **website**, and the `@` sits between them, deliberately unclaimed.
 
-## Current design — Rev B (`card-back-sketch.svg`)
+## Current design — Rev C (`card-back-sketch.svg`)
 
-Faithful to the original sketch's composition: `e-mail` label above a closed
-hand-drawn box, natural under-brackets, labels directly beneath.
+No box — three matching hand-drawn brackets. An over-bracket spans the whole
+address under the `e-mail` label; under-brackets call out `nikola` (**me**)
+and `nikolytics.com` (**website**).
 
-- **Email:** Playpen Sans Light 300
+- **Email:** Playpen Sans Bold 700
 - **Labels (`e-mail`, `me`, `website`):** Caveat SemiBold
-- **Box and brackets** are generated hand-drawn strokes — polylines perturbed
-  with smooth seeded noise and rounded with Catmull-Rom smoothing, so they
-  read as confident marker lines and rebuild identically every run.
+- **Brackets** are generated hand-drawn strokes — polylines perturbed with
+  smooth seeded noise and rounded with Catmull-Rom smoothing, so they read
+  as confident marker lines and rebuild identically every run.
 
 ## Earlier revision (Rev A, kept for reference)
 

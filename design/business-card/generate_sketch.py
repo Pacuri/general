@@ -111,21 +111,22 @@ def hand_box(x, y, w, h, wobble=2.2, corner_jitter=2.5):
     return catmull_path(hand_points(corners, wobble=wobble, closed=True), closed=True)
 
 def hand_bracket(x1, x2, y, t1, t2, wobble=1.6):
-    """Under-bracket: up-tick, across, up-tick — one natural stroke."""
+    """Bracket: tick, across, tick — one natural stroke.
+    Positive ticks point up (under-bracket); negative point down (over-bracket)."""
     pts = [(x1 + rng.uniform(-2, 2), y - t1), (x1, y), (x2, y),
            (x2 + rng.uniform(-2, 2), y - t2)]
     return catmull_path(hand_points(pts, wobble=wobble))
 
 
 # ---------- layout ------------------------------------------------------------
-playpen = Face(f"{FONTS}/PlaypenSans-Light.ttf")
-caveat = Face(f"{FONTS}/fonts_ttf/Caveat-SemiBold.ttf") if False else Face(f"{FONTS}/Caveat-SemiBold.ttf")
+playpen = Face(f"{FONTS}/PlaypenSans-Bold.ttf")
+caveat = Face(f"{FONTS}/Caveat-SemiBold.ttf")
 
 EMAIL = "nikola@nikolytics.com"
 
-# size email to ~620 units wide
+# size email to ~640 units wide
 _, w100, _ = playpen.shape(EMAIL, 100.0)
-EMAIL_SIZE = 100.0 * 620.0 / w100
+EMAIL_SIZE = 100.0 * 640.0 / w100
 email_d, email_w, cx_list = playpen.shape(EMAIL, EMAIL_SIZE)
 x0 = CX - email_w / 2
 
@@ -134,17 +135,14 @@ def span(i, j, inset=4.0):
 
 me_x1, me_x2 = span(0, 6)      # "nikola"
 web_x1, web_x2 = span(7, 21)   # "nikolytics.com"
+all_x1, all_x2 = span(0, 21)   # whole address, for the e-mail over-bracket
 
-# vertical composition (sketch order: label / box / brackets / labels)
-top_base = 118.0                     # e-mail baseline
-box_pad_x, box_pad_y = 44.0, 0.0
-box_x, box_w = x0 - box_pad_x, email_w + 2 * box_pad_x
-box_y, box_h = 148.0, 138.0
-box_cy = box_y + box_h / 2
-email_base = box_cy + (playpen.cap * EMAIL_SIZE) / 2 - 4.0
-
-brk_y = box_y + box_h + 46.0
-lbl_base = brk_y + 64.0
+# vertical composition: label / over-bracket / email / under-brackets / labels
+top_base = 128.0                     # e-mail label baseline
+top_brk_y = 168.0                    # over-bracket line (ticks point down)
+email_base = 288.0                   # address baseline
+brk_y = 330.0                        # under-brackets (ticks point up)
+lbl_base = brk_y + 66.0
 
 LBL_SIZE = 47.0
 top_d, top_w, _ = caveat.shape("e-mail", LBL_SIZE, tracking=0.6)
@@ -160,13 +158,13 @@ def place(d, tx, ty, rot=0.0):
 svg = []
 svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="88.9mm" height="50.8mm" viewBox="0 0 {W:.0f} {H:.0f}">')
 svg.append(f"""<!--
-  Metal business card - BACK - sketch variant (Rev B)
+  Metal business card - BACK - sketch variant (Rev C)
   Physical size: 88.9 x 50.8 mm. 1 SVG unit = 0.1 mm.
   Single-colour artwork: everything black is engraved / etched.
   All text converted to outlines (no fonts required).
   Line weight: {STROKE / 10:.2f} mm.
-  Faces: Playpen Sans Light 300 (email), Caveat SemiBold (labels).
-  Box and brackets are hand-drawn strokes (seeded, reproducible).
+  Faces: Playpen Sans Bold 700 (email), Caveat SemiBold (labels).
+  Brackets are hand-drawn strokes (seeded, reproducible).
 -->""")
 svg.append('<g fill="#000">')
 svg.append(place(email_d, x0, email_base))
@@ -175,7 +173,7 @@ svg.append(place(me_d, (me_x1 + me_x2) / 2 - me_w / 2, lbl_base, rot=-2.0))
 svg.append(place(web_d, (web_x1 + web_x2) / 2 - web_w / 2, lbl_base, rot=-1.2))
 svg.append("</g>")
 svg.append(f'<g fill="none" stroke="#000" stroke-width="{STROKE}" stroke-linecap="round" stroke-linejoin="round">')
-svg.append(f'<path d="{hand_box(box_x, box_y, box_w, box_h)}"/>')
+svg.append(f'<path d="{hand_bracket(all_x1, all_x2, top_brk_y, -19.0, -21.0)}"/>')
 svg.append(f'<path d="{hand_bracket(me_x1, me_x2, brk_y, 20.0, 17.0)}"/>')
 svg.append(f'<path d="{hand_bracket(web_x1, web_x2, brk_y, 18.0, 21.0)}"/>')
 svg.append("</g>")
