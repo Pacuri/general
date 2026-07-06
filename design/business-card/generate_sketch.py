@@ -153,10 +153,10 @@ web_d, web_w, _, (w_ymin, w_ymax) = caveat.shape("website", LBL_SIZE, tracking=0
 # vertical composition, mirrored around the address so top and bottom
 # groups sit at identical ink-to-bracket and bracket-to-label distances
 email_base = 288.0                       # provisional; block is re-centred below
-brk_y = email_base + e_ymax + 42.0       # under-brackets: 4.2 mm below lowest ink
-lbl_base = brk_y - w_ymin + 44.0         # bottom labels: ink top 4.4 mm below line
-top_brk_y = email_base + e_ymin - 42.0   # over-bracket: 4.2 mm above highest ink
-top_base = top_brk_y - t_ymax - 44.0     # e-mail label: ink bottom 4.4 mm above line
+brk_y = email_base + e_ymax + 24.0       # under-brackets: 2.4 mm below lowest ink
+lbl_base = brk_y - w_ymin + 26.0         # bottom labels: ink top 2.6 mm below line
+top_brk_y = email_base + e_ymin - 24.0   # over-bracket: 2.4 mm above highest ink
+top_base = top_brk_y - t_ymax - 26.0     # e-mail label: ink bottom 2.6 mm above line
 
 # centre the whole block on the card
 block_top = top_base + t_ymin
