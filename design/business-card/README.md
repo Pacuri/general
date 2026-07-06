@@ -1,8 +1,8 @@
 # Metal business card — both sides
 
-**Front** (`card-front.svg`): the vectorized logo alone, centred at 52 mm.
-**Back** (`card-back-sketch.svg`): the annotated-email design below, signed
-off with a 19 mm logo footer.
+**Front** (`card-front.svg`): the vectorized logo alone, centred at 49.4 mm.
+**Back** (`card-back-sketch.svg`): the annotated-email design below,
+dead-centred on the card.
 
 Vectorized from the original hand sketch: the email address doubles as an
 annotated diagram — `nikola` is labeled **me**, `nikolytics.com` is labeled
