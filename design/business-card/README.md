@@ -1,6 +1,6 @@
 # Metal business card — both sides
 
-**Front** (`card-front.svg`): the vectorized logo alone, centred at 49.4 mm.
+**Front** (`card-front.svg`): the vectorized logo alone, centred at 44.5 mm.
 **Back** (`card-back-sketch.svg`): the annotated-email design below,
 dead-centred on the card.
 

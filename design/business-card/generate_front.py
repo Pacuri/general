@@ -10,7 +10,7 @@ src = open(f"{OUT}/nikolytics-logo-black.svg").read()
 d = re.search(r'd="([^"]+)"', src).group(1)
 VBW, VBH = 2134.0, 540.0
 
-LW = 494.0                 # 49.4 mm wide on the card
+LW = 444.6                 # 44.5 mm wide on the card
 LH = LW * VBH / VBW
 s = LW / VBW
 tx, ty = (W - LW) / 2, (H - LH) / 2
@@ -20,7 +20,7 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="88.9mm" height="50.8mm"
   Metal business card - FRONT
   Physical size: 88.9 x 50.8 mm. 1 SVG unit = 0.1 mm.
   Single-colour artwork: everything black is engraved / etched.
-  Logo at 49.4 mm wide, centred; letterforms widened 15%, icon original.
+  Logo at 44.5 mm wide, centred; letterforms widened 15%, icon original.
 -->
 <path fill="#000" transform="translate({tx:.2f} {ty:.2f}) scale({s:.5f})" d="{d}"/>
 </svg>

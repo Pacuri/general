@@ -166,7 +166,7 @@ email_base += shift; brk_y += shift; lbl_base += shift
 top_brk_y += shift; top_base += shift
 
 STROKE = 3.6
-SCALE = 0.8  # shrink the whole composition, centred on the card
+SCALE = 0.72  # shrink the whole composition, centred on the card
 
 def place(d, tx, ty, rot=0.0):
     r = f" rotate({rot:.2f})" if rot else ""
