@@ -166,6 +166,7 @@ email_base += shift; brk_y += shift; lbl_base += shift
 top_brk_y += shift; top_base += shift
 
 STROKE = 3.6
+SCALE = 0.8  # shrink the whole composition, centred on the card
 
 def place(d, tx, ty, rot=0.0):
     r = f" rotate({rot:.2f})" if rot else ""
@@ -178,10 +179,11 @@ svg.append(f"""<!--
   Physical size: 88.9 x 50.8 mm. 1 SVG unit = 0.1 mm.
   Single-colour artwork: everything black is engraved / etched.
   All text converted to outlines (no fonts required).
-  Line weight: {STROKE / 10:.2f} mm.
+  Line weight: {STROKE * SCALE / 10:.2f} mm (composition scaled to {SCALE:.0%}).
   Faces: Playpen Sans Bold 700 (email), Caveat SemiBold (labels).
   Brackets are hand-drawn strokes (seeded, reproducible).
 -->""")
+svg.append(f'<g transform="translate({CX:.1f} {H / 2:.1f}) scale({SCALE}) translate({-CX:.1f} {-H / 2:.1f})">')
 svg.append('<g fill="#000">')
 svg.append(place(email_d, x0, email_base))
 svg.append(place(top_d, CX - top_w / 2, top_base, rot=-1.6))
@@ -192,6 +194,7 @@ svg.append(f'<g fill="none" stroke="#000" stroke-width="{STROKE}" stroke-linecap
 svg.append(f'<path d="{hand_bracket(all_x1, all_x2, top_brk_y, -19.0, -21.0)}"/>')
 svg.append(f'<path d="{hand_bracket(me_x1, me_x2, brk_y, 20.0, 17.0)}"/>')
 svg.append(f'<path d="{hand_bracket(web_x1, web_x2, brk_y, 18.0, 21.0)}"/>')
+svg.append("</g>")
 svg.append("</g>")
 svg.append("</svg>")
 
