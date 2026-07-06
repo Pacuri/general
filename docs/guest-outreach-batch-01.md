@@ -1,6 +1,6 @@
 # Guest Outreach Emails, Batch 01
 
-Pulled 2026-07-06. Template: Nikola's control version, verbatim. Two emails carry a marked heavy-story adjustment; revert if you disagree.
+Pulled 2026-07-06. Template: Nikola's control version with the reaction beat, verbatim. Two emails carry a marked heavy-story adjustment; revert if you disagree.
 
 **Before any send:** the series page is live and linked in the signature, the LinkedIn profile is rebuilt, and every send gets logged with `source: content-guest`. Email addresses still need finding (Hunter/Apollo or the company site); LinkedIn DM is the fallback channel. Follow-up cadence: day 3 LinkedIn connect with one line, day 8-10 one-line bump, then recycle in three months.
 
@@ -18,6 +18,7 @@ Hey Greg,
 
 Read about your line that healthcare has become unaffordable because
 the system treats everyday care like a catastrophic insurance event.
+Best one-liner on healthcare I've heard in years.
 
 I'm Nikola. I run a software studio, and separately I'm conducting a
 fun experiment. I'm currently trying to interview 100 freshly funded
@@ -45,7 +46,7 @@ Subject: the $100M before launch story
 Hey David,
 
 Read about how you lined up over $100M in qualified loan demand
-before Techdollar even launched.
+before Techdollar even launched. That's insane.
 
 I'm Nikola. I run a software studio, and separately I'm conducting a
 fun experiment. I'm currently trying to interview 100 freshly funded
@@ -74,7 +75,7 @@ Hey Brett,
 
 Read about how you signed 350 restaurants while Dishio was still in
 stealth, ten years into acquiring guests for restaurants the agency
-way.
+way. Honestly, how?
 
 I'm Nikola. I run a software studio, and separately I'm conducting a
 fun experiment. I'm currently trying to interview 100 freshly funded
@@ -103,7 +104,7 @@ Hey Ada,
 
 Read about your point that beauty turned every part of the body into
 a ritual while intimate care went fifteen years without meaningful
-innovation.
+innovation. Never thought about it like that, but yeah.
 
 I'm Nikola. I run a software studio, and separately I'm conducting a
 fun experiment. I'm currently trying to interview 100 freshly funded
@@ -132,7 +133,7 @@ Hey Jake,
 
 Read about how Upside started with your grandfather's move to
 assisted living and your grandmother left alone in a home that no
-longer made sense.
+longer made sense. That got me.
 
 I'm Nikola. I run a software studio, and separately I'm conducting a
 fun experiment. I'm currently trying to interview 100 freshly funded
@@ -165,6 +166,7 @@ Hey Cameron,
 
 Read about how you were giving free five-minute claims advice calls
 before Tugboat was a company, starting with a call to your cousin.
+Love that.
 
 I'm Nikola. I run a software studio, and separately I'm conducting a
 fun experiment. I'm currently trying to interview 100 freshly funded
@@ -193,6 +195,7 @@ Hey Michelle,
 
 Read about how you grew up wanting to be a veterinarian and ended up
 building a platform that just reached into the exam room instead.
+Full circle.
 
 I'm Nikola. I run a software studio, and separately I'm conducting a
 fun experiment. I'm currently trying to interview 100 freshly funded
@@ -226,6 +229,7 @@ Hey Elizabeth,
 
 Read about how Ladder began after your son's four weeks in the NICU,
 while you were running Boston Children's digital health accelerator.
+Can't imagine those weeks.
 
 I'm Nikola. I run a software studio, and separately I'm conducting an
 experiment. I'm currently trying to interview 100 freshly funded
@@ -255,7 +259,7 @@ Hey Suzanne,
 
 Read about how Able Made funds the Breakaway Foundation in Ucal's
 honor, and that you built the brand your own way for fourteen years
-before this raise.
+before this raise. Beautiful way to honor him.
 
 I'm Nikola. I run a software studio, and separately I'm conducting an
 experiment. I'm currently trying to interview 100 freshly funded
@@ -288,7 +292,7 @@ Subject: the end AI slop story
 Hey Thais,
 
 Read about your mission to end AI slop, with tastemakers who can only
-join by nomination from other tastemakers.
+join by nomination from other tastemakers. Someone had to say it.
 
 I'm Nikola. I run a software studio, and separately I'm conducting a
 fun experiment. I'm currently trying to interview 100 freshly funded
