@@ -152,6 +152,35 @@ Best,
 Nikola
 ```
 
+### 11 John Price, HighGround
+Contact: no personal LinkedIn found. Route via the HighGround company page on LinkedIn or the press contact on the funding release. Find a direct email before sending.
+
+```
+Subject: the Bloomberg for defense story
+
+Hey John,
+
+Read about your line that defense deserves the same analytical
+foundation that equity research and private credit have had for
+decades. Hard to argue with that.
+
+I'm Nikola. I run a software studio, and separately I'm conducting a
+fun experiment. I'm currently trying to interview 100 freshly funded
+founders to raise awareness of what it actually feels like in your
+shoes. The stress, the anxiety, the almost-deaths. You seem like a
+genuinely good fit.
+
+There's absolutely nothing that I'm trying to pitch, sell or push.
+Just 45 minutes of your time, remote and recorded. You get to cut
+anything you don't like, and you can use this material however you
+like.
+
+Worth 45 minutes?
+
+Best,
+Nikola
+```
+
 ---
 
 ## WAVE 2 (crown jewels, hold until two practice interviews are on tape)
@@ -199,6 +228,36 @@ Full circle.
 
 I'm Nikola. I run a software studio, and separately I'm conducting a
 fun experiment. I'm currently trying to interview 100 freshly funded
+founders to raise awareness of what it actually feels like in your
+shoes. The stress, the anxiety, the almost-deaths. You seem like a
+genuinely good fit.
+
+There's absolutely nothing that I'm trying to pitch, sell or push.
+Just 45 minutes of your time, remote and recorded. You get to cut
+anything you don't like, and you can use this material however you
+like.
+
+Worth 45 minutes?
+
+Best,
+Nikola
+```
+
+### 12 Rehan Choudhry, Chptr (top prospect: app built by outside agency CreateThrive, runs on a consulting CTO)
+LinkedIn: https://www.linkedin.com/in/rehanc
+Adjustment: "fun experiment" became "experiment" because the origin story involves tributes to COVID victims.
+
+```
+Subject: the 60-second tributes story
+
+Hey Rehan,
+
+Read about how Chptr began with you helping your wife cut 60-second
+on-air tributes for New York's first COVID victims. Stopped me for a
+second.
+
+I'm Nikola. I run a software studio, and separately I'm conducting an
+experiment. I'm currently trying to interview 100 freshly funded
 founders to raise awareness of what it actually feels like in your
 shoes. The stress, the anxiety, the almost-deaths. You seem like a
 genuinely good fit.
