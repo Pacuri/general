@@ -5,6 +5,7 @@ import math, random
 import uharfbuzz as hb
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
+from fontTools.pens.boundsPen import BoundsPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.misc.transform import Transform
 
@@ -28,8 +29,9 @@ class Face:
             self.cap = 0.7
 
     def shape(self, text, size, tracking=0.0):
-        """-> (path_d, width, cluster_x) ; cluster_x[i] = x where char i starts,
-        plus one final entry = total width."""
+        """-> (path_d, width, cluster_x, (ink_ymin, ink_ymax))
+        cluster_x[i] = x where char i starts, plus one final entry = width.
+        ink extents are relative to the baseline, y-down (negative = above)."""
         buf = hb.Buffer()
         buf.add_str(text)
         buf.guess_segment_properties()
@@ -38,22 +40,28 @@ class Face:
         x = 0.0
         parts = []
         cluster_x = {}
+        ymin, ymax = 0.0, 0.0
         n = len(buf.glyph_infos)
         for i, (info, pos) in enumerate(zip(buf.glyph_infos, buf.glyph_positions)):
             cluster_x.setdefault(info.cluster, x)
             glyph = self.glyphSet[self.order[info.codepoint]]
+            tf = Transform(scale, 0, 0, -scale,
+                           x + pos.x_offset * scale, -pos.y_offset * scale)
             spen = SVGPathPen(self.glyphSet)
-            tpen = TransformPen(spen, Transform(
-                scale, 0, 0, -scale, x + pos.x_offset * scale, -pos.y_offset * scale))
-            glyph.draw(tpen)
+            glyph.draw(TransformPen(spen, tf))
             d = spen.getCommands()
             if d:
                 parts.append(d)
+            bpen = BoundsPen(self.glyphSet)
+            glyph.draw(TransformPen(bpen, tf))
+            if bpen.bounds:
+                ymin = min(ymin, bpen.bounds[1])
+                ymax = max(ymax, bpen.bounds[3])
             x += pos.x_advance * scale
             if i < n - 1:
                 x += tracking
         xs = [cluster_x.get(i, x) for i in range(len(text))] + [x]
-        return " ".join(parts), x, xs
+        return " ".join(parts), x, xs, (ymin, ymax)
 
 
 # ---------- hand-drawn stroke helpers ----------------------------------------
@@ -125,9 +133,9 @@ caveat = Face(f"{FONTS}/Caveat-SemiBold.ttf")
 EMAIL = "nikola@nikolytics.com"
 
 # size email to ~640 units wide
-_, w100, _ = playpen.shape(EMAIL, 100.0)
+_, w100, _, _ = playpen.shape(EMAIL, 100.0)
 EMAIL_SIZE = 100.0 * 640.0 / w100
-email_d, email_w, cx_list = playpen.shape(EMAIL, EMAIL_SIZE)
+email_d, email_w, cx_list, (e_ymin, e_ymax) = playpen.shape(EMAIL, EMAIL_SIZE)
 x0 = CX - email_w / 2
 
 def span(i, j, inset=4.0):
@@ -137,17 +145,25 @@ me_x1, me_x2 = span(0, 6)      # "nikola"
 web_x1, web_x2 = span(7, 21)   # "nikolytics.com"
 all_x1, all_x2 = span(0, 21)   # whole address, for the e-mail over-bracket
 
-# vertical composition: label / over-bracket / email / under-brackets / labels
-top_base = 128.0                     # e-mail label baseline
-top_brk_y = 168.0                    # over-bracket line (ticks point down)
-email_base = 288.0                   # address baseline
-brk_y = 330.0                        # under-brackets (ticks point up)
-lbl_base = brk_y + 66.0
-
 LBL_SIZE = 47.0
-top_d, top_w, _ = caveat.shape("e-mail", LBL_SIZE, tracking=0.6)
-me_d, me_w, _ = caveat.shape("me", LBL_SIZE, tracking=0.6)
-web_d, web_w, _ = caveat.shape("website", LBL_SIZE, tracking=0.6)
+top_d, top_w, _, (t_ymin, t_ymax) = caveat.shape("e-mail", LBL_SIZE, tracking=0.6)
+me_d, me_w, _, _ = caveat.shape("me", LBL_SIZE, tracking=0.6)
+web_d, web_w, _, (w_ymin, w_ymax) = caveat.shape("website", LBL_SIZE, tracking=0.6)
+
+# vertical composition, mirrored around the address so top and bottom
+# groups sit at identical ink-to-bracket and bracket-to-label distances
+email_base = 288.0                       # provisional; block is re-centred below
+brk_y = email_base + e_ymax + 42.0       # under-brackets: 4.2 mm below lowest ink
+lbl_base = brk_y - w_ymin + 44.0         # bottom labels: ink top 4.4 mm below line
+top_brk_y = email_base + e_ymin - 42.0   # over-bracket: 4.2 mm above highest ink
+top_base = top_brk_y - t_ymax - 44.0     # e-mail label: ink bottom 4.4 mm above line
+
+# centre the whole block on the card
+block_top = top_base + t_ymin
+block_bottom = lbl_base + w_ymax
+shift = H / 2 - (block_top + block_bottom) / 2
+email_base += shift; brk_y += shift; lbl_base += shift
+top_brk_y += shift; top_base += shift
 
 STROKE = 3.6
 
