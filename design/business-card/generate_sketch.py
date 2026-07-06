@@ -158,22 +158,12 @@ lbl_base = brk_y - w_ymin + 26.0         # bottom labels: ink top 2.6 mm below l
 top_brk_y = email_base + e_ymin - 24.0   # over-bracket: 2.4 mm above highest ink
 top_base = top_brk_y - t_ymax - 26.0     # e-mail label: ink bottom 2.6 mm above line
 
-# logo footer: brand mark below the composition (pre-scale units)
-import re as _re
-_logo_src = open(f"{OUT}/nikolytics-logo-black.svg").read()
-LOGO_D = _re.search(r'd="([^"]+)"', _logo_src).group(1)
-LOGO_VBW, LOGO_VBH = 2134.0, 540.0
-LOGO_W = 240.0                            # 19.2 mm after the 0.8 composition scale
-LOGO_H = LOGO_W * LOGO_VBH / LOGO_VBW
-LOGO_GAP = 58.0                           # gap between labels and logo
-
-# centre the whole block (text + logo footer) on the card
+# centre the whole block on the card
 block_top = top_base + t_ymin
-block_bottom = lbl_base + w_ymax + LOGO_GAP + LOGO_H
+block_bottom = lbl_base + w_ymax
 shift = H / 2 - (block_top + block_bottom) / 2
 email_base += shift; brk_y += shift; lbl_base += shift
 top_brk_y += shift; top_base += shift
-logo_y = lbl_base + w_ymax + LOGO_GAP
 
 STROKE = 3.6
 SCALE = 0.8  # shrink the whole composition, centred on the card
@@ -205,8 +195,6 @@ svg.append(f'<path d="{hand_bracket(all_x1, all_x2, top_brk_y, -19.0, -21.0)}"/>
 svg.append(f'<path d="{hand_bracket(me_x1, me_x2, brk_y, 20.0, 17.0)}"/>')
 svg.append(f'<path d="{hand_bracket(web_x1, web_x2, brk_y, 18.0, 21.0)}"/>')
 svg.append("</g>")
-svg.append(f'<path fill="#000" transform="translate({CX - LOGO_W / 2:.2f} {logo_y:.2f}) '
-           f'scale({LOGO_W / LOGO_VBW:.5f})" d="{LOGO_D}"/>')
 svg.append("</g>")
 svg.append("</svg>")
 
