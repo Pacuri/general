@@ -10,8 +10,8 @@ from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.misc.transform import Transform
 
-FONTS = "/tmp/claude-0/-home-user-general/22a05b3e-be8d-5d6b-a744-eb534393085f/scratchpad/fonts"
-OUT = "/tmp/claude-0/-home-user-general/22a05b3e-be8d-5d6b-a744-eb534393085f/scratchpad/out"
+FONTS = "./fonts"
+OUT = "."
 
 W, H = 889.0, 508.0  # 0.1mm units
 CX = W / 2
