@@ -16,7 +16,7 @@ Style rules in force: plain and direct, no em dashes anywhere, facts labeled.
 
 5. **Drama doctrine.** Engineered real stakes with dramatic editing and storytelling. Events, numbers, deadlines, and outcomes are always real; the edit may be cinematic. Fabricated events and staged outcomes are banned. (Nikola)
 
-6. **Squad and roles.** Mario and Aleksije join as partners and shareholders, split to be defined (open item). Mario owns talent acquisition, training, and capacity, and works as an engineer in the early phase. Aleksije manages employees, scouts talent to Mario, and enforces performance. Content operations (capture, edit, post) go to a film-student intern recruited on an internship-now-pay-later basis; the pay-later promise goes in writing (open item). (Nikola)
+6. **Squad and roles.** Mario and Aleksije join as partners and shareholders, split to be defined (open item). Mario owns talent acquisition, training, and capacity, and works as an engineer in the early phase. Aleksije manages employees, scouts talent to Mario, and enforces performance. Content operations (capture, edit, post) go to a film-student intern recruited on an unpaid trial, paid once results are demonstrated; Nikola wants to see how he works before money moves. Open item: define the results bar that triggers pay. (Nikola)
 
 7. **Engineers-on-camera amendment.** The operating manual rule "the two engineers are never pulled into marketing work" is amended: the protection covers delivery time, not camera presence. Team members may appear in content voluntarily; nobody performs for content at the cost of delivery hours. (Nikola)
 
@@ -24,7 +24,7 @@ Style rules in force: plain and direct, no em dashes anywhere, facts labeled.
 
 9. **Founder time budget.** The logged 3 hours per day for outreach plus content stands until the office move (about a month out), at which point the budget and cadence are re-sized. Content quotas in phase 1 are sized to roughly 30 founder-minutes per day via weekly batch filming. (Nikola)
 
-10. **Shane content permission.** The formal co-content barter agreement (2026-07-04 log, open item 11) is replaced by a lighter gate: one written confirmation message from Shane covering filming and publishing the two app builds, the equity disclosure line in every co-post, and a 48-hour veto window. Verbal agreement already exists (Nikola statement); the written message is a pending open item because the publish gate requires written form. USOPC phrasing rules and the athlete-figure verification gate remain unchanged. (Nikola, modified in session)
+10. **Shane content permission: written-form requirement removed everywhere.** The written barter agreement and every written-permission requirement for Shane/Paragons content are removed from all documents (operating manual Sections 5.3, 5.4, 9, facts sheet, open item 11; strategy document). Shane's verbal permission (Nikola statement, 2026-07-09) is accepted as sufficient. What remains unchanged: the standing equity disclosure line in every co-post, USOPC phrasing rules, and the athlete-figure verification gate. The 2026-07-04 log entries stay as written history; this decision supersedes them. (Nikola, overruling consultant recommendation)
 
 11. **Sourcing machine adopted.** Daily prompt-driven pull of 10 freshly funded non-technical founders; dedupe ledger at `docs/leads.csv`; outreach template locked as Nikola's control version (with reaction beat) for the first 100 sends; follow-up cadence email, day-3 LinkedIn touch, day 8-10 bump, 3-month recycle; crown-jewel leads (agency-built products) held until two practice interviews are on tape. Agency-built product added as a top-prospect signal. (Nikola + session)
 
@@ -36,8 +36,8 @@ Style rules in force: plain and direct, no em dashes anywhere, facts labeled.
 
 ## Consultant flags on record
 
-1. Shane gate: verbal permission does not satisfy the written-permission publish gate; the one-message fix is pending (decision 10).
-2. Intern single point of failure: one unpaid person owns the entire top-of-funnel production; second content hand is a standing search, pay-later terms must be written.
+1. Shane gate: consultant recommended keeping written form; Nikola removed the requirement everywhere (decision 10). Overruled, on record.
+2. Intern single point of failure: one person owns the entire top-of-funnel production; second content hand stays a standing search.
 3. Bubble review: checkpoint at conversation 25 (decision 3).
 
 ## Session artifacts

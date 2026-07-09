@@ -170,7 +170,7 @@ Benchmarks we plan against, from verified 2025-26 outreach data: cold automated 
 
 We sell a $250,000 service with, today, no public case studies. Content is how a stranger becomes comfortable enough to take a first call, and it silently nurtures every conversation the other channels start (Hormozi reports 78% of his own clients had consumed at least two long-form pieces before booking; treat that as directional, not our data). Direction: narrate real work (build artifacts, decisions, scar tissue), give far more than we ask, and route asks to the Teardown.
 
-The full content system (identity, pillars, cadence, profile copy, first two weeks of posts) is defined in a dedicated session and will be appended to this manual. Two rules are already binding: **INTIIMI is never referenced in any content**, and **Paragons content requires Shane's written permission plus the standing disclosure line** (Section 9).
+The full content system (identity, pillars, cadence, profile copy, first two weeks of posts) is defined in `content-strategy-2026-07.md` (2026-07-09 session). Two rules are already binding: **INTIIMI is never referenced in any content**, and **every Paragons co-post carries the standing disclosure line** (Section 9). Shane's permission is in place (verbal, accepted 2026-07-09).
 
 ### 5.4 Referral partners
 
@@ -186,7 +186,7 @@ Referrals are our highest-conviction channel because they transfer trust we have
 
 **Standard referral fees for everyone else:** $10,000 per closed build, $2,500 per Blueprint-only close, same collected-cash and 3-way-intro rules. The ask-at-purchase script runs at every signing: "Who else in your investor's portfolio is fighting a platform build?"
 
-**Shane / Paragons orbit:** an equity-aligned founder-client willing to co-create content and make introductions. All Paragons referral and content activity waits on the written barter agreement and permission gates in Section 9.
+**Shane / Paragons orbit:** an equity-aligned founder-client willing to co-create content and make introductions. Paragons referral and content activity runs under the disclosure and phrasing rules in Section 9; Shane's permission is in place (verbal, accepted 2026-07-09).
 
 ### 5.5 Reddit (gated experiment)
 
@@ -286,7 +286,7 @@ From "automations by Nikola" to **Nikolytics: premium custom platform builds for
 1. Lead with pressure transfer and certainty, in plain language. Every such claim is immediately backed by its mechanism (named team, staging URL from day 3, client-owned accounts, checklist, audit, the guarantee).
 2. Banned: "MVP"; invented or implied proof of any kind; unverified statistics; superlatives without a mechanism; em dashes; dollar figures paired with time promises in names or headlines.
 3. **Proof discipline (the current hard constraint):** Nikolytics has zero publishable case studies, zero publishable testimonials, and zero cleared quantified client outcomes today. Nothing may state or imply otherwise. The honest move, used openly: say exactly that, and show the mechanisms that remove the need for trust. Proof slots exist in the site structure and stay empty until real assets clear their gates.
-4. **Paragons publish gates:** Shane's written permission per the co-content barter agreement; the athlete figure verified and precisely phrased; USOPC-protected terms ("Team USA", Olympic marks) handled as descriptions of fact with no implied endorsement; every co-post carries the standing disclosure line: "I hold a small equity stake in Shane's umbrella company."
+4. **Paragons publish gates:** the athlete figure verified and precisely phrased; USOPC-protected terms ("Team USA", Olympic marks) handled as descriptions of fact with no implied endorsement; every co-post carries the standing disclosure line: "I hold a small equity stake in Shane's umbrella company." Shane's permission is in place (verbal, accepted 2026-07-09).
 5. **INTIIMI: never referenced. Anywhere. In anything.** No hints, no anonymized case studies, no "an eight-figure-funded client." The NDA conversation may change this later; until the decision log says so, the rule is absolute.
 6. Tone: plain, direct, specific, confident without theatrics. Numbers beat adjectives. If a sentence would survive on a hype-agency's site unchanged, rewrite it.
 
@@ -367,7 +367,7 @@ Every number this company uses, with its status. **Verified** = happened, provab
 | Delivery speed | Full platforms shipped by ≤3-person teams in 2 weeks to 1 month | Verified (Nikola statement) |
 | Internal ship target | ~2 weeks against the 30-day promise | Decision |
 | American Paragons build | $250,000, closed, platform launched and live | Verified |
-| Paragons platform usage | ~1,000 Team USA / Olympic athletes (~1/3 of USA's athletes) + hundreds of supporters | **Gated: Nikola's estimate; verify figure + Shane's written OK + USOPC-safe phrasing before any public use** |
+| Paragons platform usage | ~1,000 Team USA / Olympic athletes (~1/3 of USA's athletes) + hundreds of supporters | **Gated: Nikola's estimate; verify figure + USOPC-safe phrasing before any public use (Shane's OK in place, verbal 2026-07-09)** |
 | Paragons Performance | Built; awaiting marketing funding | Verified, gated same as above |
 | Sport Endorse | $5,000 integration, closed | Verified |
 | The Players Impact | $7,500 integration, pending | Verified |
@@ -393,7 +393,7 @@ Every number this company uses, with its status. **Verified** = happened, provab
 8. Week Ledger tooling before the first Block sale (staged, Q4 2026)
 9. Iteration Week cost confirmation before the first Block (staged)
 10. CRM choice so source data never migrates (Nikola, before outreach starts)
-11. Shane co-content barter agreement signed before the first Paragons post (Nikola)
+11. Resolved 2026-07-09: written barter requirement removed everywhere; Shane's verbal permission accepted (decision log 2026-07-09)
 12. Mark's terms papered before the first introduction (Nikola)
 13. INTIIMI disclosure conversation with the founder (Nikola)
 14. Paragons athlete figure verification (Nikola + Shane)

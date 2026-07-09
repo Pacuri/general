@@ -63,7 +63,7 @@ Content asks feed the show, not the pipeline: the standing ask is "know a founde
 - **LinkedIn:** outreach surface and profile only. Not a content platform. (Supersedes channel-plan v1.)
 - **Cadence, phase 1 (pre-office, pre-intern):** 3 to 4 clips per week, phone camera, batch-filmed. Interviews as booked.
 - **Cadence, phase 2 (office + intern live):** daily clip, weekly interview, office footage. Sized properly at the office move (about a month out), when the founder time budget is re-set. Until then the logged 3 hours per day stands.
-- INTIIMI is never referenced in any content. The NDA engagement is never referenced. Paragons content requires Shane's written confirmation (one message suffices) plus the standing disclosure line in every co-post: "I hold a small equity stake in Shane's umbrella company."
+- INTIIMI is never referenced in any content. The NDA engagement is never referenced. Paragons content is cleared (Shane's permission in place, verbal); every co-post carries the standing disclosure line: "I hold a small equity stake in Shane's umbrella company."
 - Heavy-story tone rule: when a founder's story involves death, illness, or grief, playfulness is stripped from every artifact touching it, and Nikola rereads before anything ships.
 
 ## 8. The sourcing and booking machine (operational)
@@ -83,22 +83,21 @@ Content asks feed the show, not the pipeline: the standing ask is "know a founde
 | Main character, host, investigator | Nikola | On camera everywhere, interviews, final say on every artifact |
 | Partner, shareholder (split TBD) | Mario | Talent acquisition, training, capacity; engineering in the early phase |
 | Partner, shareholder (split TBD) | Aleksije | People management, talent scouting to Mario, performance enforcement |
-| Content ops (intern, pay-later in writing) | Film student, to be recruited | Capture, edit, post; greatest-hits list; counter updates. Known single point of failure; second content hand is a standing search |
+| Content ops (intern; unpaid trial, paid once results show) | Film student, to be recruited | Capture, edit, post; greatest-hits list; counter updates. Known single point of failure; second content hand is a standing search |
 | Engineers | Existing team | Delivery. May appear on camera voluntarily; delivery time stays protected (amended from "never in marketing work") |
 
 ## 10. Ordered checklist (sequence, not calendar)
 
 1. Nikola rebuilds the LinkedIn profile (in progress).
 2. Series page shipped (premise, counter, three rules, face; one route on nikolytics.com or standalone).
-3. Shane's written confirmation message obtained.
-4. Practice interview 1 (Aleksije) and 2 (Shane orbit) recorded.
-5. Episode zero filmed.
-6. Wave 1 emails sent (addresses found first); name test begins across batches.
-7. First real interviews; first clips published; counter goes public.
-8. Wave 2 crown jewel sends.
-9. Intern recruited (Mario), terms in writing.
-10. Office move: re-size the time budget and cadence (phase 2).
-11. Conversation 25: bubble review (private).
+3. Practice interview 1 (Aleksije) and 2 (Shane orbit) recorded.
+4. Episode zero filmed.
+5. Wave 1 emails sent (addresses found first); name test begins across batches.
+6. First real interviews; first clips published; counter goes public.
+7. Wave 2 crown jewel sends.
+8. Intern recruited (Mario); unpaid trial, paid once results show.
+9. Office move: re-size the time budget and cadence (phase 2).
+10. Conversation 25: bubble review (private).
 
 ## 11. First two weeks of content (concrete, phase 1, phone camera)
 
@@ -122,10 +121,9 @@ Monthly: followers and total reach per platform, growth rate absolute and percen
 ## 13. Open items
 
 1. Equity split for Mario and Aleksije (Nikola).
-2. Intern pay-later terms in writing (Nikola + Mario).
-3. Shane written-confirmation message (Nikola, five minutes).
-4. Series name: pick or let the test decide (candidates in Section 4).
-5. Series page build and where it lives (Nikola + web team).
-6. Time budget and cadence re-size at office move (about a month out).
-7. Paid editor decision retired for now in favor of the intern; revisit if cadence breaks.
-8. LinkedIn profile copy inputs: episode zero script and Section 1 identity line feed the rewrite.
+2. Intern payment trigger: define the results bar that starts pay (Nikola + Mario).
+3. Series name: pick or let the test decide (candidates in Section 4).
+4. Series page: confirmed todo. Build it and decide where it lives (Nikola + web team).
+5. Time budget and cadence re-size at office move (about a month out).
+6. Paid editor decision retired for now in favor of the intern; revisit if cadence breaks.
+7. LinkedIn profile copy inputs: episode zero script and Section 1 identity line feed the rewrite.
